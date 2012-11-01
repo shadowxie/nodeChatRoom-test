@@ -82,7 +82,7 @@ io.sockets.on('connection', function (socket) {
     });
   });  
 
-  socket.on('getAllChar', function(data) { 
+  socket.on('getAllChat', function(data) { 
 
     ChatMsg.find({},function(err, msgList){
       for (var i in msgList) {

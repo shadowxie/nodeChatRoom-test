@@ -8,7 +8,7 @@ block append head
 	script(type="text/javascript")
 		var socket = io.connect('http://localhost:3000');
 		socket.on('connect', function() {
-			socket.emit('getAllChar');
+			socket.emit('getAllChat');
 			loadAllMsg();
 			socket.emit('addme', prompt('Who are you?')); 
 		});
