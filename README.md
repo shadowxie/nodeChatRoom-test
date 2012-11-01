@@ -1,15 +1,24 @@
-nodeCharRoom-test
-=================
-利用 socket.io 實作聊天室
+#nodeCharRoom-test
+利用 socket.io 實作聊天室，在以前很難想像要如何控制多個使用者進行realtime的服務，透過socket.io可以很輕易的做到
+
+##功能說明
+
+* 此專案base是參考下面網站介紹完成的範例:
+[聊天廣播 - Socket.io](http://iosdevelopersnote.blogspot.tw/2012/09/socketio.html)
+
+* 除了聊天室之外，另外實作了歷史聊天記錄自動載入功能，透過mongohg
+
+* 另外確認若是另一個獨立運作的網頁是否可以使用獨立的node server的服務，如下節說明。
+* 透過聊天室實作可以在延伸其他功能，比如說：
+	* 強制所有上線使用者登出
+	* 讀取到RFID觸動網頁進行相關動作
+	* 系統維修時，禁止使用者上線
 
 
-功能說明
--------
-除了一般的聊天室之外，另外實作了歷史聊天記錄自動載入功能，透過mongohg
+##確認即使是外部網頁也可執行socket服務
 
+請參考 git 中 indepandTest.html 檔案，當app 運作時，在執行此檔案也同要有聊天室的功能
 
-indepandTest.html
------------------
 測試即使獨立開啟html(不在server底下開啟)，也可以使用聊天室的功能
 其中只要將
 
@@ -19,6 +28,7 @@ indepandTest.html
 
 	<script type="text/javascript" charset="utf-8" src="http://localhost:3000/socket.io/socket.io.js">
 
-就可以執行該server所定義好的功能
+就可以執行該server所定義好的功能，確認可行表示若是手機app也可以有realtime的服務，透過socket.io
+		
 
 
